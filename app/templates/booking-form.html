@@ -1,0 +1,58 @@
+{% extends 'layout/base.html' %}
+
+{% block title %}Đặt lịch khám{% endblock %}
+
+{% block content %}
+
+{% if current_user.is_authenticated %}
+<section>
+    <div class="section" id="booking">
+        <div class="section-center">
+            <div class="container">
+                <div class="row">
+                    <div class="booking-form">
+                        <div class="form-header">
+                            <h1>Đặt lịch khám</h1>
+                        </div>
+                        <form id="bookForm" name="bookForm">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="form-label" for="timeId">Chọn thời gian:</label>
+                                    <!--for="timeSelect"-->
+                                    <select id="timeId">
+                                        {% for t in time %}
+                                        <option name="time" value="{{ t.id }}"> {{ t.period }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Pickup Date</span>
+                                        <input class="form-control" id="dateId" name="date" required type="date">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <span class="form-label">Mô tả</span>
+                                    <textarea class="form-control" id="descId" name="desc"
+                                              placeholder="Mô tả tình trạng bệnh"></textarea>
+                                </div>
+                                <div class="form-btn">
+                                    <button class="submit-btn" id="bookGo" onclick="addBook()">Đặt lịch khám
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% else %}
+<div class="container">
+    <h3 class="text-center text-info"><a class="text-decoration-none " href="/login"> ĐẶNG NHẬP ĐỂ ĐƯỢC ĐẶT LỊCH
+        KHÁM </a>
+    </h3>
+</div>
+{% endif %}
+{% endblock %}
