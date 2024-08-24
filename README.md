@@ -1,6 +1,6 @@
 # Clinic_CNPM
 
-<br />
+
 # Quản Lý Phòng Mạch Tư
 <br />
 
@@ -32,21 +32,17 @@
 
 ## Thiết Kế Hệ Thống
 
-### Sơ Đồ Lớp
-
-### Sơ Đồ Hoạt Động
-
-### Sơ Đồ Tuần Tự
-
-### Lược Đồ Cơ Sở Dữ Liệu
-
-## Yêu Cầu Hệ Thống
+  ### - Sơ Đồ Lớp
+  
+  ### - Sơ Đồ Hoạt Động
+  
+  ### - Sơ Đồ Tuần Tự
+  
+  ### - Lược Đồ Cơ Sở Dữ Liệu
 
 ## Hướng Dẫn Cài Đặt
 
 ## Hướng Dẫn Sử Dụng
-
-## Đóng Góp
 
 ## Liên Hệ
   
